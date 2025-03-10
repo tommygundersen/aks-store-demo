@@ -286,3 +286,16 @@ spec:
   selector:
     app: store-front
   type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: store-front-pub
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: store-front
+  type: LoadBalancer
+  
